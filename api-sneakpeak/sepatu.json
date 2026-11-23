@@ -17,6 +17,15 @@
       "ukuran": "38, 39, 40, 41, 42",
       "gambar": "https://images.unsplash.com/photo-1549298916-b41d501d3772?w=500",
       "deskripsi": "Sepatu lokal dengan insole empuk berteknologi ultralite foam untuk aktivitas seharian."
+    },
+    {
+      "id": 5,
+      "nama": "Patrobas Ivan Low",
+      "merek": "Patrobas",
+      "harga": "Rp 310.000",
+      "ukuran": "39, 40, 41, 42, 43",
+      "gambar": "https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?w=500",
+      "deskripsi": "Sneakers vulkanisir lokal dengan desain garis samping khas dan bantalan empuk."
     }
   ],
   "internasional": [
@@ -37,6 +46,15 @@
       "ukuran": "39, 40, 41, 42",
       "gambar": "https://images.unsplash.com/photo-1518002171953-a080ee817e1f?w=500",
       "deskripsi": "Sneakers klasik berbahan kulit lembut dan suede yang awalnya dirancang untuk sepak bola indoor."
+    },
+    {
+      "id": 6,
+      "nama": "New Balance 550",
+      "merek": "New Balance",
+      "harga": "Rp 2.099.000",
+      "ukuran": "40, 41, 42, 43",
+      "gambar": "https://images.unsplash.com/photo-1539185441755-769473a23570?w=500",
+      "deskripsi": "Sepatu retro bergaya basket era 80-an dengan material kulit kokoh dan tampilan klasik."
     }
   ]
 }
