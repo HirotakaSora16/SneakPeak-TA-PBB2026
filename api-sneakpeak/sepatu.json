@@ -1,0 +1,42 @@
+{
+  "lokal": [
+    {
+      "id": 1,
+      "nama": "Compass Gazelle Low",
+      "merek": "Compass",
+      "harga": "Rp 408.000",
+      "ukuran": "39, 40, 41, 42, 43",
+      "gambar": "https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?w=500",
+      "deskripsi": "Sneakers kanvas klasik buatan Bandung dengan desain siluet vintage yang nyaman dipakai harian."
+    },
+    {
+      "id": 2,
+      "nama": "Ventela Public Low",
+      "merek": "Ventela",
+      "harga": "Rp 290.000",
+      "ukuran": "38, 39, 40, 41, 42",
+      "gambar": "https://images.unsplash.com/photo-1549298916-b41d501d3772?w=500",
+      "deskripsi": "Sepatu lokal dengan insole empuk berteknologi ultralite foam untuk aktivitas seharian."
+    }
+  ],
+  "internasional": [
+    {
+      "id": 3,
+      "nama": "Nike Air Force 1 '07",
+      "merek": "Nike",
+      "harga": "Rp 1.549.000",
+      "ukuran": "40, 41, 42, 43, 44",
+      "gambar": "https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=500",
+      "deskripsi": "Sepatu basket ikonik dengan bahan kulit premium dan bantalan Nike Air yang legendaris."
+    },
+    {
+      "id": 4,
+      "nama": "Adidas Samba OG",
+      "merek": "Adidas",
+      "harga": "Rp 2.200.000",
+      "ukuran": "39, 40, 41, 42",
+      "gambar": "https://images.unsplash.com/photo-1518002171953-a080ee817e1f?w=500",
+      "deskripsi": "Sneakers klasik berbahan kulit lembut dan suede yang awalnya dirancang untuk sepak bola indoor."
+    }
+  ]
+}
