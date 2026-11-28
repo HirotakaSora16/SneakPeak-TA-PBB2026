@@ -1,12 +1,19 @@
-import React from 'react';
-import { View, Text, Image, StyleSheet, ScrollView } from 'react-native';
+import React, { useState } from 'react';
+import { View, Text, Image, StyleSheet, ScrollView, TouchableOpacity, Modal } from 'react-native';
 
 export default function DetailInternasionalScreen({ route }) {
   const { sepatu } = route.params;
+  const [modalVisible, setModalVisible] = useState(false);
 
   return (
     <ScrollView style={styles.container}>
-      <Image source={{ uri: sepatu.gambar }} style={styles.gambar} />
+      <TouchableOpacity activeOpacity={0.9} onPress={() => setModalVisible(true)}>
+        <Image source={{ uri: sepatu.gambar }} style={styles.gambar} />
+        <View style={styles.hintBadge}>
+          <Text style={styles.hintText}>🔍 Ketuk gambar untuk memperbesar</Text>
+        </View>
+      </TouchableOpacity>
+
       <View style={styles.konten}>
         <Text style={styles.badge}>Brand Internasional • {sepatu.merek}</Text>
         <Text style={styles.nama}>{sepatu.nama}</Text>
@@ -16,6 +23,24 @@ export default function DetailInternasionalScreen({ route }) {
         <Text style={styles.label}>Deskripsi Produk:</Text>
         <Text style={styles.isi}>{sepatu.deskripsi}</Text>
       </View>
+
+      <Modal visible={modalVisible} transparent={true} animationType="fade" onRequestClose={() => setModalVisible(false)}>
+        <View style={styles.modalBackground}>
+          <TouchableOpacity style={styles.closeButton} onPress={() => setModalVisible(false)}>
+            <Text style={styles.closeText}>✕ Tutup</Text>
+          </TouchableOpacity>
+
+          <ScrollView
+            contentContainerStyle={styles.zoomContainer}
+            maximumZoomScale={4}
+            minimumZoomScale={1}
+            showsHorizontalScrollIndicator={false}
+            showsVerticalScrollIndicator={false}
+          >
+            <Image source={{ uri: sepatu.gambar }} style={styles.fullGambar} resizeMode="contain" />
+          </ScrollView>
+        </View>
+      </Modal>
     </ScrollView>
   );
 }
@@ -23,10 +48,25 @@ export default function DetailInternasionalScreen({ route }) {
 const styles = StyleSheet.create({
   container: { flex: 1, backgroundColor: '#fff' },
   gambar: { width: '100%', height: 280 },
+  hintBadge: {
+    position: 'absolute',
+    bottom: 10,
+    right: 10,
+    backgroundColor: 'rgba(0,0,0,0.6)',
+    paddingHorizontal: 10,
+    paddingVertical: 5,
+    borderRadius: 20,
+  },
+  hintText: { color: '#fff', fontSize: 12 },
   konten: { padding: 20 },
   badge: { color: '#457b9d', fontWeight: 'bold', marginBottom: 4 },
   nama: { fontSize: 24, fontWeight: 'bold', color: '#111' },
   harga: { fontSize: 20, color: '#e63946', fontWeight: 'bold', marginVertical: 8 },
   label: { fontSize: 14, fontWeight: 'bold', marginTop: 14, color: '#444' },
-  isi: { fontSize: 15, color: '#555', marginTop: 4, lineHeight: 22 }
+  isi: { fontSize: 15, color: '#555', marginTop: 4, lineHeight: 22 },
+  modalBackground: { flex: 1, backgroundColor: 'rgba(0,0,0,0.95)', justifyContent: 'center' },
+  closeButton: { position: 'absolute', top: 45, right: 20, zIndex: 10, backgroundColor: '#333', paddingHorizontal: 14, paddingVertical: 8, borderRadius: 20 },
+  closeText: { color: '#fff', fontWeight: 'bold', fontSize: 14 },
+  zoomContainer: { flex: 1, justifyContent: 'center', alignItems: 'center' },
+  fullGambar: { width: '100%', height: '80%' },
 });

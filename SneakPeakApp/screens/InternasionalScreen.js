@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { View, Text, FlatList, Image, TouchableOpacity, StyleSheet, ActivityIndicator } from 'react-native';
 
-// GANTI 192.168.1.XX dengan IPv4 laptop kamu!
-const API_URL = 'http://192.168.1.102:3000/api/internasional';
+const API_URL = 'http://192.168.1.101:3000/api/internasional';
 
 export default function InternasionalScreen({ navigation }) {
   const [data, setData] = useState([]);
